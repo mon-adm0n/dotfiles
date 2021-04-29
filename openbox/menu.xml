@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+<menu id="apps-editors-menu" label="Editors">
+  <item label="GVim">
+    <action name="Execute">
+      <command>gvim</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>GVim</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="VIM">
+    <action name="Execute">
+      <command>vim</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>Emacs</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="MousePad">
+    <action name="Execute">
+      <command>mousepad</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Kate">
+    <action name="Execute">
+      <command>kate</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+
+<menu id="apps-net-menu" label="Internet">
+  <item label="Google Chrome">
+    <action name="Execute">
+      <command>bash /opt/google/chrome/google-chrome</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>Firefox</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Opera">
+    <action name="Execute">
+      <command>opera</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>Opera</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-graphics-menu" label="Graphics">
+  <item label="Gimp">
+    <action name="Execute">
+      <command>gimp</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Flameshot">
+    <action name="Execute">
+      <command>flameshot</command>
+    </action>
+  </item>
+  <item label="Inkscape">
+    <action name="Execute">
+      <command>inkscape</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="openbox-menu" label="Openbox">
+  <item label="Openbox Configuration Manager">
+    <action name="Execute">
+      <command>obconf</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <separator />
+  <item label="Reconfigure Openbox">
+    <action name="Reconfigure" />
+  </item>
+</menu>
+<menu id="system-menu" label="LogOut">
+	  <item label="Shutdown">
+	    <action name="Execute">
+	      <command>shutdown -h now</command>
+	      <startupnotify>
+		<enabled>yes</enabled>
+	      </startupnotify>
+	    </action>
+	  </item>
+	  <item label="Reboot">
+	    <action name="Execute">
+	      <command>reboot</command>
+	    </action>
+	  </item>
+	  <item label="Logout">
+	    <action name="Exit">
+	      <prompt>yes</prompt>
+	    </action>
+	  </item>
+	</menu>
+
+<menu id="root-menu" label="Openbox 3">
+  <separator label="Applications" />
+  <menu id="apps-editors-menu"/>
+  <menu id="apps-graphics-menu"/>
+  <menu id="apps-net-menu"/>
+  <menu id="apps-term-menu"/>
+
+  <item label="Terminal">
+    <action name="Execute">
+      <command>xfce4-terminal</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Thunar">
+    <action name="Execute">
+      <command>Thunar</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+
+  <menu id="apps-fileman-menu"/>
+  <separator label="System" />
+  <menu id="openbox-menu"/>
+  <menu id="system-menu"/>
+  <separator />
+
+</menu>
+
+</openbox_menu>
